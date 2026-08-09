@@ -44,6 +44,42 @@ Topics covered:
 * `DELETE`
 * SQL comments
 
+### Lesson 3 — Aggregate Functions
+
+Topics covered:
+
+* `COUNT()` — Count the number of records
+* `AVG()` — Calculate the average value
+* `MAX()` — Find the highest value
+* `MIN()` — Find the lowest value
+* `SUM()` — Calculate the total of numerical values
+* Column aliases using `AS`
+
+Examples practiced:
+
+```sql
+-- Count students
+SELECT COUNT(*) AS total_students
+FROM Students;
+
+-- Calculate average age
+SELECT AVG(age) AS average_age
+FROM Students;
+
+-- Find oldest student age
+SELECT MAX(age) AS oldest_age
+FROM Students;
+
+-- Find youngest student age
+SELECT MIN(age) AS youngest_age
+FROM Students;
+
+-- Calculate total age
+SELECT SUM(age) AS total_age
+FROM Students;
+```
+
+
 ## Current Database
 
 The current `Students` table contains information such as:

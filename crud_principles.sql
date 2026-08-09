@@ -42,3 +42,23 @@ where student_id = 4;
 -- Removing Givens Data because he left the school
 delete from students
 where student_id = 5;
+
+-- Count() tells us how many records there are
+select count(*) as total_students
+from students;
+
+-- AVG() 
+select avg(age) as average_age
+from students;
+
+--Max()
+select max(age) as oldest_age
+from students;
+
+--Min()
+select min(age) as youngest_age
+from students;
+
+--Total()
+select sum(age) as total_age
+from students;
