@@ -90,15 +90,6 @@ The current `Students` table contains information such as:
 * Age
 * Course
 
-## Repository Structure
-
-```text
-SQL-Learning/
-│
-├── README.md
-├── lesson01.sql
-└── lesson02.sql
-```
 
 ## Learning Goals
 
