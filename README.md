@@ -112,3 +112,52 @@ My goal is to develop a strong understanding of SQL and database management and 
 * JDBC
 * Java + PostgreSQL
 * Spring Boot + PostgreSQL
+
+
+-- Lesson 4: SQL JOINs
+
+-- 1. INNER JOIN: Show students and their matching courses
+SELECT
+    Students.first_name,
+    Students.last_name,
+    Courses.course_name
+FROM Students
+INNER JOIN Courses
+    ON Students.course_id = Courses.course_id;
+
+-- 2. INNER JOIN: Show only Cyber Security students
+SELECT
+    Students.first_name,
+    Students.last_name,
+    Courses.course_name
+FROM Students
+INNER JOIN Courses
+    ON Students.course_id = Courses.course_id
+WHERE Courses.course_name = 'Cyber Security';
+
+-- 3. LEFT JOIN: Show all students, even without a matching course
+SELECT
+    Students.first_name,
+    Students.last_name,
+    Courses.course_name
+FROM Students
+LEFT JOIN Courses
+    ON Students.course_id = Courses.course_id;
+
+-- 4. RIGHT JOIN: Show all courses, even without matching students
+SELECT
+    Students.first_name,
+    Students.last_name,
+    Courses.course_name
+FROM Students
+RIGHT JOIN Courses
+    ON Students.course_id = Courses.course_id;
+
+-- 5. GROUP BY: Count students per course
+SELECT
+    Courses.course_name,
+    COUNT(Students.student_id) AS total_students
+FROM Courses
+LEFT JOIN Students
+    ON Students.course_id = Courses.course_id
+GROUP BY Courses.course_name;
